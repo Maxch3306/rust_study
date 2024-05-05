@@ -1,4 +1,4 @@
-use restaurant::eat_at_restaurant;
+//use restaurant::eat_at_restaurant;
 use std::collections::HashMap;
 
 enum Message{
@@ -30,7 +30,7 @@ fn main() {
     map.insert(1, 2);
     dbg!(map);
     //dbg!(res);
-    eat_at_restaurant();
+    //eat_at_restaurant();
     let a = Message::Move { x: (22131), y: (8888) };
     let b = Message::Quit;
     let c = Message::Write("sad".to_string());
