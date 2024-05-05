@@ -1,18 +1,9 @@
+use std::{cmp::Ordering, io};
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
 
 mod front_of_house {
     pub mod hosting {
@@ -29,8 +20,18 @@ mod front_of_house {
         fn take_payment() {}
     }
 }
-
+pub use crate::front_of_house::hosting;
 pub fn eat_at_restaurant() {
+    hosting::add_to_waitlist();
+}
+mod customer {
+    use crate::front_of_house::hosting;
+    pub fn eat_at_restaurant() {
+        hosting::add_to_waitlist();
+    }
+}
+
+pub fn eat_at_restaurant_1() {
     // 在夏天订购一个黑麦土司作为早餐
     let mut meal = back_of_house::Breakfast::summer("Rye");
     // 改变主意更换想要面包的类型

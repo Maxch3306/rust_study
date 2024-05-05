@@ -1,4 +1,6 @@
 use restaurant::eat_at_restaurant;
+use std::collections::HashMap;
+
 enum Message{
     Quit,
     Move{x:i32,y:i32},
@@ -24,7 +26,9 @@ impl Message {
 
 
 fn main() {
-    
+    let mut map = HashMap::new();
+    map.insert(1, 2);
+    dbg!(map);
     //dbg!(res);
     eat_at_restaurant();
     let a = Message::Move { x: (22131), y: (8888) };
