@@ -1,5 +1,4 @@
-use restaurant::add;
-
+use restaurant::eat_at_restaurant;
 enum Message{
     Quit,
     Move{x:i32,y:i32},
@@ -25,9 +24,9 @@ impl Message {
 
 
 fn main() {
-    let res = add(1, 2);
-    dbg!(res);
-
+    
+    //dbg!(res);
+    eat_at_restaurant();
     let a = Message::Move { x: (22131), y: (8888) };
     let b = Message::Quit;
     let c = Message::Write("sad".to_string());
