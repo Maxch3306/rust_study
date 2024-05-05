@@ -1,3 +1,5 @@
+use libtest1::hello;
+
 enum Message{
     Quit,
     Move{x:i32,y:i32},
@@ -23,6 +25,7 @@ impl Message {
 
 
 fn main() {
+    hello();
     let a = Message::Move { x: (22131), y: (8888) };
     let b = Message::Quit;
     let c = Message::Write("sad".to_string());

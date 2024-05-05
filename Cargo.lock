@@ -478,6 +478,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c198f91728a82281a64e1f4f9eeb25d82cb32a5de251c6bd1b5154d63a8e7bd"
 
 [[package]]
+name = "libtest1"
+version = "0.1.0"
+
+[[package]]
 name = "linux-raw-sys"
 version = "0.4.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1090,6 +1094,7 @@ dependencies = [
 name = "testing"
 version = "0.1.0"
 dependencies = [
+ "libtest1",
  "rocket",
 ]
 
