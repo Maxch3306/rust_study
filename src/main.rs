@@ -1,4 +1,4 @@
-use libtest1::hello;
+use restaurant::add;
 
 enum Message{
     Quit,
@@ -25,7 +25,9 @@ impl Message {
 
 
 fn main() {
-    hello();
+    let res = add(1, 2);
+    dbg!(res);
+
     let a = Message::Move { x: (22131), y: (8888) };
     let b = Message::Quit;
     let c = Message::Write("sad".to_string());
